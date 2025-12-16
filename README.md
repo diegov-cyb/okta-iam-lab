@@ -48,6 +48,14 @@ The goal of this lab was to gain practical experience with real-world Okta admin
 
 MFA was enforced using Okta sign-on policies and applied to both standard users and administration.
 
+![MFA enrollment configuration](screenshots/okta6.png)
+
+MFA was enforced using Okta sign-on policies and applied to both standard users and administration.
+
+![Password expiration enforcement](screenshots/okta5.jpeg)
+
+Password expiration policies ensure users update credentials before accessing protected resources.
+
 ---
 
 ## **Application Integration**
@@ -60,15 +68,24 @@ MFA was enforced using Okta sign-on policies and applied to both standard users 
 - **Login Type:** IdP-initiated and App-initiated
 - **Access Scope:** Accounting group only
 
----
+### **Okta End-User Dashboard**
+
+![Accounting Portal visible in Okta dashboard](screenshots/okta4.png)
+
+This accounting Portal application appears in the Okta end-user dashboard for users assigned to the Accounting group, confirming successful group-based access and IdP-initiated login.
 
 ## **Key Configuration**
+
+![OIDC app restricted to Accounting group](screenshots/okta3.png)
 
 - Application access restricted to the Accounting Group
 - Admin users explicitly excluded
 - Application tile displayed in the Okta End-User Dashboard
 - Login initiated by Either Okta or App
 - Redirects validated using OIDC Debugger
+
+![OIDC client credentials](screenshots/okta7.png)
+This application uses OAuth 2.0 Authorization Code flow with a confident client configuration.
 
 ---
 
@@ -84,6 +101,8 @@ MFA was enforced using Okta sign-on policies and applied to both standard users 
 
 ## **Troubleshooting & Lessons Learned**
 
+![IdP-initiated login configuration](screenshots/okta9.jpeg)
+
 - Applications will not appear in the Okta dashboard if configured as App-initiated only
 - IdP-initiated login requires an Initiate Login URL
 - App visibility settings directly impact end-user experience
@@ -97,6 +116,12 @@ MFA was enforced using Okta sign-on policies and applied to both standard users 
 - Gained hands-on experience with MFA, OIDC, and RBAC
 - Learned how to troubleshoot common Okta misconfigurations
 - Developed documentation suitable for enterprise environments
+
+## **Additional Okta Features Reviewed**
+
+![Self-service app requests](screenshots/okta4.png)
+
+Self-service app request settings were reviewed to understand user-driven access requests and administrative controls.
 
 
 
